@@ -4,11 +4,8 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
   schedule:
-    # Every day
-    - cron: "55 06 * * *"
-  push:
-    branches:
-      - main
+    # Every day 6:00 AM UTC
+    - cron: "00 06 * * *"
 jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
