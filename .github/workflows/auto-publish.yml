@@ -6,6 +6,9 @@ on:
   schedule:
     # Every day
     - cron: "55 06 * * *"
+  push:
+    branches:
+      - main
 jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
